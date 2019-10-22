@@ -10,6 +10,10 @@ function updateClock ( )
   var currentMinutes = currentTime.getMinutes ( );
   var currentSeconds = currentTime.getSeconds ( );
 
+  currentHours = ( currentHours < 10 ? "0" : "" ) + currentHours;
+  currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+  currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+  
 var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
 var colorchange = "#" + currentHours + currentMinutes + currentSeconds;
 
